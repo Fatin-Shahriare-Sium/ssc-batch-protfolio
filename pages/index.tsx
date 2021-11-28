@@ -5,7 +5,7 @@ import Navbar from './component/navbar';
 import { gql } from '@urql/core';
 import { useQuery } from 'urql';
 import OpenerOverlay from './component/opener-overlay';
-import { StudentDataResponses } from './generated/graphql';
+import { StudentDataResponses } from '../generated/graphql';
 import { sign } from 'crypto';
 import Loading from './component/loding';
 

@@ -3,7 +3,7 @@ import { GetServerSideProps } from 'next'
 import Head from 'next/head'
 import { Client, gql } from '@urql/core'
 import { Query } from 'urql'
-import { StudentDataResponses, UpdateProfileMutationResponses } from '../generated/graphql'
+import { StudentDataResponses, UpdateProfileMutationResponses } from '../../generated/graphql'
 console.log();
 
 let client = new Client({
