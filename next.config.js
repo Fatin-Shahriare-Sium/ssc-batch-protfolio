@@ -8,6 +8,7 @@ module.exports = withImages({
   env: {
     URL: 'http://localhost:5000/',
   },
+  eslint: { ignoreDuringBuilds: true },
   webpack(config, options) {
     return config
   }
