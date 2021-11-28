@@ -7,7 +7,7 @@ import { StudentDataResponses, UpdateProfileMutationResponses } from '../../gene
 console.log();
 
 let client = new Client({
-    url: process.env.URL!,
+    url: 'https://ssc-batch-server.herokuapp.com/graphql',
 
 })
 let PROFILE_DATA = gql`

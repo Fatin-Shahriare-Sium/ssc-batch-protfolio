@@ -3,13 +3,16 @@ import type { AppProps } from 'next/app'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Layout from './component/layout'
 import { Provider, Client } from 'urql'
+import useUrl from './component/useUrl'
 console.log(process.env.DEVELOPMENT);
 
-let client = new Client({
-  url: process.env.URL!,
-})
 
 function MyApp({ Component, pageProps }: AppProps) {
+  let { url } = useUrl()
+
+  let client = new Client({
+    url: 'https://ssc-batch-server.herokuapp.com/graphql',
+  })
 
   return (
     <Provider value={client}>
