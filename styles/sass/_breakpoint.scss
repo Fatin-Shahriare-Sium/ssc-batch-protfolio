@@ -1,0 +1,41 @@
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+@mixin media-breakpoint-up($pointname:map-get($breakpoints,'xs')) {
+    @media screen and (min-width:map-get($breakpoints,$pointname)) {
+        //min-width:768px means it will work between 768 to more than 768px.>=768px ,so this called media-breakpoint-up(md)
+        @content
+    }   
+};
+
+@mixin media-breakpoint-down($pointname:map-get($breakpoints,'xs')){
+  @media screen and (max-width:map-get($breakpoints,$pointname)) {
+      //max-width:768px means it will work between 768 to less than 768px.<=768px.so it is called media-break-down(md)
+      @content
+  }
+};
+
+@mixin  media-breakpoint-down-custom($breakpoint:0px) {
+  @media screen and (max-width:$breakpoint) {
+    @content
+  }
+};
+
+@mixin  media-breakpoint-up-custom($breakpoint:0px) {
+  @media screen and (min-width:$breakpoint) {
+    @content
+  }
+};
+
+@mixin media-breakpoint-clamp($max-width-bp,$min-width-bp){
+  @media screen and (max-width:map-get($breakpoints,$max-width-bp)) and (min-width:map-get($breakpoints,$min-width-bp)){
+    @content
+  }
+};
+

@@ -1,0 +1,10 @@
+overwrite: true
+schema: "http://localhost:5000/"
+documents: "pages/**/*.tsx"
+generates:
+  pages/generated/graphql.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "urql-introspection"
+      - "typescript-urql"

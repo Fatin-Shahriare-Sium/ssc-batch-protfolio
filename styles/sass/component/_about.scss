@@ -1,0 +1,14 @@
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    div{
+        width: 90%;
+    }
+    p{
+        font-size: 3rem;
+        font-weight: 700;
+        font-family:'robot',sans-serif;
+    }
+}

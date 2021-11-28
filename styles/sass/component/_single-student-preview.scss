@@ -1,0 +1,69 @@
+.signle-image-preview__wrapper{
+    background-color: var( --card-back-color);
+    border-radius: 9px;
+    overflow: hidden;
+    width: 300px!important;
+    padding: 0px!important;
+    @include media-breakpoint-down('md'){
+        width: 153px!important;
+    }
+}
+
+.signle-image-preview{
+   
+    cursor: pointer;
+    position: relative;
+    // background: -moz-linear-gradient(-45deg, #000000 0%, #000000 25%, #1e539e 50%, #ff3083 75%, #7800a8 100%); /* FF3.6-15 */
+    // background: -webkit-linear-gradient(-45deg, #000000 0%,#000000 25%,#1e539e 50%,#ff3083 75%,#7800a8 100%); /* Chrome10-25,Safari5.1-6 */
+    // background: linear-gradient(135deg, #000000 0%,#000000 25%,#1e539e 50%,#ff3083 75%,#7800a8 100%);
+    // background-size: 400% 400%;
+    // background-repeat: no-repeat;
+    // cursor: pointer;
+    // transition: all .3s ease;
+    &:hover{
+        // background-position: 100% 100%;
+        .signle-image-preview__img{
+            img{
+                transform: scale(1.5);
+            }
+        }
+       
+    }
+   
+}
+
+
+
+.signle-image-preview__img{
+    position: relative;
+    overflow: hidden;
+   
+    img{
+        width: 100%;
+        transition: all .7s ease;
+        object-fit: contain;
+        border-radius: 9px;
+        // mix-blend-mode: screen;
+        overflow: hidden;
+
+    }
+  
+}
+
+.signle-image-preview__details{
+    padding: 5px;
+    background-color: var (--card-back-color);
+    p{
+        color: var( --card-text-color);
+        font-weight: 500;
+    }
+    p:nth-child(2){
+        @include media-breakpoint-down('md'){
+           font-size: 1.4rem;
+        }
+    }
+    
+   
+    
+}
+

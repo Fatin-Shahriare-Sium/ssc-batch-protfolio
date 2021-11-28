@@ -1,0 +1,36 @@
+.navbar-wrapper{
+background-color: var(--nav-back-color);
+padding: 5px;
+
+
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 87%;
+    margin: auto;
+}
+
+.navbar-tab{
+    display: flex;
+
+    p{
+        padding: 0px 7px;
+        font-size: 2rem;
+        font-weight: 500;
+        transition: all .3s ease;
+        cursor: pointer;
+        &:hover{
+            color: #0a9be9;
+        }
+    }
+}
+
+.navbar-icon img{
+    width: 77px;
+
+}
+

@@ -1,0 +1,74 @@
+
+@import './breakpoint';
+@import './component/single-student';
+@import './component/single-student-preview';
+@import './component/navbar';
+@import './component/homepage';
+@import './component/layout';
+@import './component/about';
+@import './component/opener-overlay';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: var(--back-color)!important;
+    color: var(--text-color)!important;
+};
+
+:root{
+  --back-color:#fff;
+  --text-color:#000;
+  --secondary-color:#74EE6B ;
+  --card-back-color:#000;
+  --card-text-color:#fff;
+  --single-details-back-color:#e7fee7;
+  --nav-back-color:#ffffff;
+  --img-overlay-color:#456fd9;
+}
+
+// :root{
+//   --back-color:#000;
+//   --text-color:#fff;
+//   --secondary-color:#74EE6B ;
+//   --card-back-color:#101010;
+//   --card-text-color:#fff;
+//   --single-details-back-color:#0f120f;
+//   --nav-back-color:#0c0b0b;
+//   --img-overlay-color:#000000;
+  
+// }
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  };
+  
+
+a {
+  color: inherit;
+  text-decoration: none;
+};
+
+p{
+  font-size: 2rem;
+}
+
+
+
+html{
+  @include media-breakpoint-up('xs'){
+    font-size: 47%;
+  }
+  @include media-breakpoint-up('sm'){
+    font-size: 55.25%;
+  }
+  @include media-breakpoint-up('md'){
+    font-size: 60%;
+  }
+}
+

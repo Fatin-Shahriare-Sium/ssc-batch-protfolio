@@ -1,0 +1,55 @@
+.opener-overlay-wrapper{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: hide 1s 5s forwards;
+}
+// .opener-overlay{
+//     width: 90%;
+//     margin: auto;
+//     background-color: red;
+    
+// }
+.opener-overlay p{
+    text-align: center;
+    color: #fff;
+    font-size: 5rem;
+    font-weight: 700;
+    @include media-breakpoint-down('sm'){
+        font-size: 3rem;
+    }
+}
+.opener-overlay p:nth-child(1){
+   opacity: 0;
+    animation: riser 3s forwards;
+   
+}
+
+.opener-overlay__text-div{
+   transform: translateY(60vh);
+   animation: bringBack 1s 3s forwards;
+};
+
+@keyframes riser{
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes bringBack{
+    to{
+        transform: translateY(0);
+    }
+}
+
+@keyframes hide{
+    to{
+        top:-117%
+    }
+}

@@ -1,0 +1,161 @@
+.signle-student__wrapper{
+    padding: 5px;
+    // background-image:url('../../../assets/wave.svg');
+    // background-repeat: no-repeat;
+    // background-position: top;
+}
+
+.signle-student__wrapper-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 11px;
+    @include media-breakpoint-down('md'){
+        height: auto!important;
+    }
+}
+
+
+.signle-student__top-name{
+    font-size: 4rem;
+}
+
+
+
+
+
+.single-student__img-wrapper{
+    padding: 13px;
+    transform: translateX(-200%);
+    transition: all .3s ease;
+    animation:bringImgWrapperBack 1s forwards ;
+    img{
+        width: 100%;
+        object-fit: contain;
+        border-radius: 9px;
+    }
+}
+
+@keyframes bringImgWrapperBack {
+    to{
+        transform: translateX(0);
+    }
+}
+
+.single-student__img-below{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2%;
+}
+.single-student__social-link-wrapper{
+    display: flex;
+    margin-top: 1%;
+    &>div{
+        margin-right: 4rem;
+    }
+}
+
+.single-student__social-link{
+    img{
+        width: 33px;
+    }
+}
+
+.single-student__status{
+    font-size: 2rem;
+    font-weight: 700;
+    opacity: .9;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+.signle-student__wrapper-right{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    @include media-breakpoint-down('md'){
+        height: auto!important;
+        margin-top: 14%!important;
+    }
+}
+
+.signle-student__wrapper-right::before{
+    content: '-----Details-----';
+    position: absolute;
+    font-size:2rem;
+    font-weight: 700;
+    display: none;
+    top: -39px;
+    @include media-breakpoint-down('md'){
+    display: block;
+    }
+}
+
+
+.single-student__details-name{
+    position: relative;
+    max-width: max-content;
+    p{
+        font-size: 5rem;
+        font-weight: 900;
+        font-family: 'Outfit', sans-serif;
+        background: linear-gradient(
+            90deg,#0f3fdd,#e21123);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            @include media-breakpoint-down('sm'){
+                font-size: 4rem;
+            }
+            
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        display: block;
+        background-color: var(--text-color);
+        width: 100%;
+        height: 100%;
+        z-index: 39;
+        left: 0;
+        animation: removeShadow 2.7s forwards;
+        
+    }
+}
+
+@keyframes removeShadow{
+    to{
+        width:0%;
+    }
+}
+
+
+.single-student__details-other{
+    p{
+        font-size: 2.5rem;
+        padding: 5px;
+        font-weight: 500;
+        border-radius: 9px;
+        cursor: pointer;
+        span{
+            font-weight: 700;
+        }
+        
+        background-color:var(--single-details-back-color);
+     
+        &:hover{
+            background-color: var(--text-color);
+            color: var(--back-color);
+            transition: all .4 ease;
+        }
+    }
+}
+
+
