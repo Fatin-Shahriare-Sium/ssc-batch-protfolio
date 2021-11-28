@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { Client, gql } from '@urql/core'
 import { Query } from 'urql'
 import { StudentDataResponses, UpdateProfileMutationResponses } from '../generated/graphql'
-console.log(process.env.NODE_ENV);
+console.log();
 
 let client = new Client({
     url: process.env.URL!,
@@ -56,7 +56,7 @@ const SingleStudent: React.FC<{ profileData: UpdateProfileMutationResponses }> =
         <div>
             <Head>
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+                <link rel="preconnect" href="https://fonts.gstatic.com" />
                 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@900&family=Poppins:wght@500&display=swap" rel="stylesheet" />
                 <title>{`${profileData.name!} -The Departure SSC Batch 2021 of Bhangoora Biggan School and College`}</title>
                 <meta content={profileData.name!} name='description' />
@@ -77,7 +77,7 @@ const SingleStudent: React.FC<{ profileData: UpdateProfileMutationResponses }> =
                         {/* <p className='signle-student__top-name'>Fatin Shahriare Sium</p> */}
                         <div className='single-student__img-wrapper '>
 
-                            <img src={profileData.profileImg} alt={profileData.name} />
+                            <img src={profileData.profileImg!} alt={profileData.name!} />
                             <div className='single-student__img-below'>
                                 <p className='single-student__status'>{profileData.workingAs}</p>
                                 <div className='single-student__social-link-wrapper'>

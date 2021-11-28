@@ -685,6 +685,6 @@ export const Document = gql`
 }
     `;
 
-export function useQuery(options: Omit<Urql.UseQueryArgs<QueryVariables>, 'query'> = {}) {
-  return Urql.useQuery<Query>({ query: Document, ...options });
-};
+// export function useQuery(options: Omit<Urql.UseQueryArgs<QueryVariables:any>, 'query'> = {}) {
+//   return Urql.useQuery<Query>({ query: Document, ...options });
+// };
