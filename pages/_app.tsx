@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   let { url } = useUrl()
 
   let client = new Client({
-    url: 'https://ssc-batch-server.herokuapp.com/graphql',
+    url: url,
   })
 
   return (
