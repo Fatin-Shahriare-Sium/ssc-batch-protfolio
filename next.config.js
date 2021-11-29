@@ -3,7 +3,7 @@ const withImages = require('next-images')
 module.exports = withImages({
   images: {
     disableStaticImages: true,
-    domains: ['images.unsplash.com']
+    domains: ['res.cloudinary.com']
   },
   env: {
     URL: 'http://localhost:5000/',

@@ -30,11 +30,19 @@
     transform: translateX(-200%);
     transition: all .3s ease;
     animation:bringImgWrapperBack 1s forwards ;
-    img{
-        width: 100%;
-        object-fit: contain;
+    &> span {
+        position: unset !important;
+      }
+    
+    .student__profileData-img{
+        width: 100%!important;
+        object-fit: contain!important;
+        height: unset!important;
         border-radius: 9px;
+        position: relative!important;
+
     }
+   
 }
 
 @keyframes bringImgWrapperBack {

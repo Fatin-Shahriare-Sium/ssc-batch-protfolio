@@ -23,7 +23,7 @@
     &:hover{
         // background-position: 100% 100%;
         .signle-image-preview__img{
-            img{
+            .image{
                 transform: scale(1.5);
             }
         }
@@ -37,16 +37,32 @@
 .signle-image-preview__img{
     position: relative;
     overflow: hidden;
-   
-    img{
-        width: 100%;
-        transition: all .7s ease;
-        object-fit: contain;
-        border-radius: 9px;
-        // mix-blend-mode: screen;
-        overflow: hidden;
+    height: 253px;
 
-    }
+  &> div {
+    position: unset !important;
+  }
+
+  .image {
+    object-fit: cover;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+    overflow: hidden;
+    transition: all .7s ease;
+  }
+    @include media-breakpoint-down('md'){
+        height: 147px;
+     }
+    // img{
+    //     width: 100%;
+        
+    //     object-fit: contain;
+    //     border-radius: 9px;
+    //     // mix-blend-mode: screen;
+        
+
+    // }
   
 }
 
@@ -58,8 +74,9 @@
         font-weight: 500;
     }
     p:nth-child(2){
+        font-size: 1.9rem;
         @include media-breakpoint-down('md'){
-           font-size: 1.4rem;
+           font-size: 1.3rem;
         }
     }
     

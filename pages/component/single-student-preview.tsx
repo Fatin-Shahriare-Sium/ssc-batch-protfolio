@@ -22,10 +22,10 @@ const SingleStudentPreview: React.FC<{ name: string, uid: string, gmail: string,
             <div className='signle-image-preview'>
                 <Link href={`/student/${uid}`}>
                     <div id='signle-image-preview__img' className='signle-image-preview__img'>
-                        {/* <Image layout='responsive' width='100%' height='100%' alt='https://images.unsplash.com/photo-1466657718950-8f9346c04f8f?dpr=1&auto=format&fit=crop&w=800&h=800&q=80&cs=tinysrgb' src='https://images.unsplash.com/photo-1466657718950-8f9346c04f8f?dpr=1&auto=format&fit=crop&w=800&h=800&q=80&cs=tinysrgb'>
+                        <Image src={profileImg} layout={'fill'} className='image' alt={name}>
 
-                    </Image> */}
-                        <img src={profileImg} alt={name} />
+                        </Image>
+                        {/* <img src={profileImg} alt={name} /> */}
 
                     </div>
                 </Link>

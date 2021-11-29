@@ -3,7 +3,7 @@ import { GetServerSideProps } from 'next'
 import Head from 'next/head'
 import { Client, gql } from '@urql/core'
 import { StudentDataResponses, UpdateProfileMutationResponses } from '../../generated/graphql'
-
+import Image from 'next/image'
 
 let client = new Client({
     url: 'https://ssc-batch-server.herokuapp.com/graphql',
@@ -59,7 +59,7 @@ const SingleStudent: React.FC<{ profileData: UpdateProfileMutationResponses }> =
                 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@900&family=Poppins:wght@500&display=swap" rel="stylesheet" />
                 <title>{`${profileData.name!} -The Departure SSC Batch 2021 of Bhangoora Biggan School and College`}</title>
                 <meta content={profileData.name!} name='description' />
-                <meta property="og:title" content={`${profileData.name!} - Digital Grower`} />
+                <meta property="og:title" content={`${profileData.name!} - The Departure SSC Batch 2021 of Bhangoora Biggan School and College  `} />
                 <meta property="og:description" content={`${profileData.name!} -one of the students of The Departure SSC Batch 2021 of Bhangoora Biggan School and College`} />
                 <meta property="og:image" content={profileData.profileImg!} />
                 <meta property="og:image:alt" content={profileData.name!} />
@@ -75,8 +75,10 @@ const SingleStudent: React.FC<{ profileData: UpdateProfileMutationResponses }> =
                     <div className='col-md-5 signle-student__wrapper-left'>
                         {/* <p className='signle-student__top-name'>Fatin Shahriare Sium</p> */}
                         <div className='single-student__img-wrapper '>
+                            <Image src={profileData.profileImg!} alt={profileData.name!} className='student__profileData-img' layout={'fill'}>
 
-                            <img src={profileData.profileImg!} alt={profileData.name!} />
+                            </Image>
+                            {/* <img src={profileData.profileImg!} alt={profileData.name!} /> */}
                             <div className='single-student__img-below'>
                                 <p className='single-student__status'>{profileData.workingAs}</p>
                                 <div className='single-student__social-link-wrapper'>
@@ -114,7 +116,7 @@ const SingleStudent: React.FC<{ profileData: UpdateProfileMutationResponses }> =
                             <div className='single-student__details-other'>
                                 <p style={{ fontWeight: "500" }}><span style={{ fontWeight: "700" }}>Father Name: </span>{profileData.fathername}</p>
                                 <p style={{ fontWeight: "500" }}><span style={{ fontWeight: "700" }}>Gmail: </span>{profileData.gmail}</p>
-                                <p style={{ fontWeight: "500" }}><span style={{ fontWeight: "700" }}>Phone Number: </span>{profileData.phoneNumber}</p>
+                                <p style={{ fontWeight: "500" }}><span style={{ fontWeight: "700" }}>Phone Number: </span>{`0${profileData.phoneNumber}`}</p>
                                 <p style={{ fontWeight: "500" }}><span style={{ fontWeight: "700" }}>BirthDate: </span>{profileData.birthDate}</p>
                                 <p style={{ fontWeight: "500" }}><span style={{ fontWeight: "700" }}>BirthPlace: </span>{profileData.birthplace}</p>
                                 <p style={{ fontWeight: "500" }}><span style={{ fontWeight: "700" }}>Working As: </span>{profileData.workingAs}</p>
